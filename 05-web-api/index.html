@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Request API</title>
+</head>
+<body>
+    
+    <script src="script.js"></script>
+    <script>
+        // REQUEST API DENGAN FETCH ASYNCRONOUS
+        const loadApi = async () => {
+            try {
+                const req = await fetch('https://swapi.dev/api/films')        
+                const data2 = await req.json()
+                console.log(data2);
+            } catch (salah) {
+                console.log('Ada yang salah', salah);
+            }
+        }
+        loadApi()
+    </script>
+</body>
+</html>

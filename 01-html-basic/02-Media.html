@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan HTML kedua</title>
+</head>
+<body>
+    <!-- OPSI GAMBAR, LOADING -->
+    <h3>Image Element</h3>
+    <P style="margin-bottom: 1500px;">Please Scroll...</P>
+    <img src="img/cat-small.jpg" alt="Kucing abu-abu"
+    srcset="img/cat-small.jpg 500w, img/cat-medium.
+    jpg 750w, img/cat-large.jpg 1000w" sizes="
+    (min-width: 1200px) 50vw"
+    loading="lazy">
+
+    <!-- FIGURE -->
+    <figure>
+        <img src="img/cat-small.jpg" alt="Kucing abu-abu">
+        <figcaption>Kucing abu-abu</figcaption>
+    </figure>
+
+    <!-- PICTURE -->
+    <picture>
+        <source media="(min-width: 960px)" srcset="img/cat-large.jpg" sizes="50vw">
+        <source media="(min-width: 600px)" srcset="img/cat-medium.jpg">
+        <img class="example" src="img/cat-small.jpg" alt="Kucing abu-abu">
+    </picture>
+
+    <!-- AUDIO -->
+    <figure>
+    <figcaption>
+    Dengarkan "Skyline - Anno Domini"
+    </figcaption>
+    <audio controls src="audio/1.mp3">
+    Browser *tidak mendukung tag <code>audio</code>
+    </audio>
+    </figure>
+
+    <!-- VIDEO -->
+    <video controls width="400">
+    <source src="media/vlog.mp4" type="video/mp4">
+    <track src="media/caption.vtt" kind="captions" title="Bahasa
+    Indonesia" srclang="id">
+    </video>
+
+
+    
+</body>
+</html>

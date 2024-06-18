@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas in HTML</title>
+</head>
+<body>
+    <canvas id="mycanvas"></canvas>
+
+    <script>
+        const mycanvas = document. getElementById( 'mycanvas');
+
+        mycanvas.width = window. innerWidth;
+        mycanvas.height = window.innerHeight;
+
+        const c = mycanvas.getContext('2d');
+
+        // PERSEGI
+        c.fillRect(25, 25, 100, 100);
+
+        c.fillStyle = 'lightblue';
+        c.strokeStyle = '#000';
+        c.lineWidth = 2;
+
+        // LINGKARAN
+        c.arc(500, 100, 50, 0, 2 * Math.PI);
+        c.fill();
+        c.stroke();
+
+        c.fillStyle = 'lightgreen';
+        c.strokeStyle = '#000';
+        c.lineWidth = 2;
+
+        // SEGI TIGA
+        c.beginPath();
+        c.moveTo(300, 50);
+        c.lineTo(450, 350);
+        c.lineTo(150, 350);
+        c.lineTo(300, 50);
+        c.fill();
+        c.stroke();
+
+        c.fillStyle = 'pink';
+        c.strokeStyle = '#333';
+        c.lineWidth = 5;
+
+        // PERSEGI PANJANG
+        c.rect(50, 400, 200, 300);
+        c.fill();
+        c.stroke();
+    </script>
+</body>
+</html>
